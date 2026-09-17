@@ -38,7 +38,13 @@ def square(start, end):
 
 def circle(start, end):
     """Draw circle from start to end."""
-    pass  # TODO
+    import math
+    radius = math.hypot(end.x - start.x, end.y - start.y)
+    up()
+    goto(start.x, start.y - radius)
+    down()
+    from turtle import circle as draw_circle
+    draw_cricle(radius)
 
 
 def rectangle(start, end):
@@ -79,9 +85,11 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
+
