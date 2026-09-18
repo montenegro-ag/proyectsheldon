@@ -44,7 +44,7 @@ def circle(start, end):
     goto(start.x, start.y - radius)
     down()
     from turtle import circle as draw_circle
-    draw_cricle(radius)
+    draw_circle(radius)
 
 def rectangle(start, end):
     """Draw rectangle from start to end."""
